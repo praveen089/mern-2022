@@ -8,7 +8,10 @@ function App() {
   console.log('--form submit--', form);
   const resp = await fetch("http://localhost:4000/transaction",{
     method:"POST",
-    body:form
+    body:JSON.stringify(form),
+    headers:{
+      'content-type':"application/json"
+    }
   });
   console.log('--resp--', resp);
  };
