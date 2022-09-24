@@ -10,10 +10,27 @@
   "keywords": [],
   "author": "Praveen Kumar",
   "license": "ISC",
-  "dependencies": {    
+  "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.1",
     "nodemon": "^2.0.20"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2000",
+    "env": {
+      "NODE_ENV": "Development",
+      "PORT": 4000,
+      "DB_URI": "mongodb://localhost:27017/mern",
+      "COOKIE_EXPIRE": "1",
+      "JWT_SECRET": "234TF45626273849463738276543212",
+      "JWT_EXPIRE": "1d"
+    }
   }
 }
